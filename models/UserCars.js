@@ -6,6 +6,11 @@ const UserCarSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+    language: {
+    type: String,
+    enum: ["en", "am"],
+    default: "en"
+  },
 
   fullName: {
     type: String,
@@ -35,9 +40,25 @@ const UserCarSchema = new mongoose.Schema({
 
   carPhotos: [
     {
-      type: String
+      type: String,
+      required: true
     }
   ],
+
+  minRentDays: {
+    type: Number,
+    default: 1
+  },
+  maxRentDays: {
+    type: Number,
+    default: 730
+  },
+
+  rentType: {
+    type: String,
+    required: true,
+  },
+  
 
   createdAt: {
     type: Date,
