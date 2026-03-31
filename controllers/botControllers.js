@@ -83,7 +83,7 @@ function validateCarYear(year) {
   const y = parseInt(year);
   return !isNaN(y) && y >= 1950 && y <= new Date().getFullYear();
 }
-function validatePlate(plate) { return /^[0-5][A-Z]{2}[0-9]{5}$/.test(plate); }
+function validatePlate(plate) { return /^[0-5][A-Z]{3}[0-9]{5}$/.test(plate); }
 
 /* ------------------- BOT ------------------- */
 module.exports = (bot) => {
