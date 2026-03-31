@@ -45,13 +45,9 @@ const UserCarSchema = new mongoose.Schema({
     }
   ],
 
-  minRentDays: {
-    type: Number,
-    default: 1
-  },
   maxRentDays: {
-    type: Number,
-    default: 730
+    type: String,
+    required: true,
   },
 
   rentType: {
@@ -61,7 +57,7 @@ const UserCarSchema = new mongoose.Schema({
   
 
   createdAt: {
-    type: Date,
+    type: Date, 
     default: Date.now
   }
 
